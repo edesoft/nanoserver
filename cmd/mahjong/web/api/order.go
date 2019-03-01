@@ -9,16 +9,16 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/lonng/nanoserver/cmd/mahjong/web/api/provider"
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/db/model"
+	"nanoserver/cmd/mahjong/web/api/provider"
+	"nanoserver/db"
+	"nanoserver/db/model"
 	"github.com/lonng/nex"
 	"github.com/pborman/uuid"
 	"golang.org/x/net/context"
 
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/pkg/whitelist"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/pkg/errutil"
+	"nanoserver/pkg/whitelist"
+	"nanoserver/protocol"
 )
 
 func MakeOrderService() http.Handler {

@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lonng/nanoserver/db/model"
-	"github.com/lonng/nanoserver/pkg/algoutil"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/db/model"
+	"nanoserver/pkg/algoutil"
+	"nanoserver/pkg/errutil"
+	"nanoserver/protocol"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 )

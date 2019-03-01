@@ -5,12 +5,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/pkg/async"
-	"github.com/lonng/nanoserver/pkg/constant"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/pkg/room"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/db"
+	"nanoserver/pkg/async"
+	"nanoserver/pkg/constant"
+	"nanoserver/pkg/errutil"
+	"nanoserver/pkg/room"
+	"nanoserver/protocol"
 
 	"github.com/lonng/nano"
 	"github.com/lonng/nano/component"

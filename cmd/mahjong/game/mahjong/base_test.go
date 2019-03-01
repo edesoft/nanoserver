@@ -1,7 +1,7 @@
 package mahjong
 
 import (
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/protocol"
 	"testing"
 )
 

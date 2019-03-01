@@ -4,8 +4,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/pkg/errutil"
+	"nanoserver/protocol"
 
 	"github.com/lonng/nano/session"
 )

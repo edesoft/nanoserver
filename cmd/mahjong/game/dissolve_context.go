@@ -3,8 +3,8 @@ package game
 import (
 	"time"
 
-	"github.com/lonng/nanoserver/pkg/constant"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/pkg/constant"
+	"nanoserver/protocol"
 
 	"github.com/lonng/nano"
 )

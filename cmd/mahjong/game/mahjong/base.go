@@ -2,7 +2,7 @@ package mahjong
 
 import (
 	"fmt"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/protocol"
 )
 
 const (

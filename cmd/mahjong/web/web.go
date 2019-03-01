@@ -2,17 +2,17 @@ package web
 
 import (
 	"context"
-	"fmt"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 
-	"github.com/lonng/nanoserver/cmd/mahjong/web/api"
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/pkg/algoutil"
-	"github.com/lonng/nanoserver/pkg/whitelist"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/cmd/mahjong/web/api"
+	"nanoserver/db"
+	"nanoserver/pkg/algoutil"
+	"nanoserver/pkg/whitelist"
+	"nanoserver/protocol"
+
 	"github.com/lonng/nex"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
@@ -23,16 +23,20 @@ type Closer func()
 var logger = log.WithField("component", "http")
 
 func dbStartup() func() {
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?%s",
-		viper.GetString("database.username"),
-		viper.GetString("database.password"),
-		viper.GetString("database.host"),
-		viper.GetString("database.port"),
-		viper.GetString("database.dbname"),
-		viper.GetString("database.args"))
+	// dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?%s",
+	// 	viper.GetString("database.username"),
+	// 	viper.GetString("database.password"),
+	// 	viper.GetString("database.host"),
+	// 	viper.GetString("database.port"),
+	// 	viper.GetString("database.dbname"),
+	// 	viper.GetString("database.args"))
+
+	connstr := viper.GetString("database.connstr")
+
+	logger.Infof("ConnStr=%s", connstr)
 
 	return db.MustStartup(
-		dsn,
+		connstr,
 		db.MaxIdleConns(viper.GetInt("database.max_idle_conns")),
 		db.MaxIdleConns(viper.GetInt("database.max_open_conns")),
 		db.ShowSQL(viper.GetBool("database.show_sql")))

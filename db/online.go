@@ -4,8 +4,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"time"
 
-	"github.com/lonng/nanoserver/db/model"
-	"github.com/lonng/nanoserver/pkg/errutil"
+	"nanoserver/db/model"
+	"nanoserver/pkg/errutil"
 )
 
 func InsertOnline(count int, deskCount int) {

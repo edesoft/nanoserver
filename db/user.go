@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/lonng/nanoserver/db/model"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/db/model"
+	"nanoserver/pkg/errutil"
+	"nanoserver/protocol"
 )
 
 //QueryUser get the user by id

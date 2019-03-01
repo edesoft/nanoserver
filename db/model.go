@@ -3,7 +3,7 @@ package db
 import (
 	"time"
 
-	"github.com/lonng/nanoserver/db/model"
+	"nanoserver/db/model"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
@@ -88,7 +88,7 @@ func envInit() {
 }
 
 //New create the database's connection
-func MustStartup(dsn string, opts ...ModelOption) func() {
+func MustStartup(connstring string, opts ...ModelOption) func() {
 	logger = log.WithField("component", "model")
 	settings := &options{
 		maxIdleConns: defaultMaxConns,
@@ -101,10 +101,10 @@ func MustStartup(dsn string, opts ...ModelOption) func() {
 		opt(settings)
 	}
 
-	logger.Infof("DSN=%s ShowSQL=%t MaxIdleConn=%v MaxOpenConn=%v", dsn, settings.showSQL, settings.maxIdleConns, settings.maxOpenConns)
+	logger.Infof("ShowSQL=%t MaxIdleConn=%v MaxOpenConn=%v", settings.showSQL, settings.maxIdleConns, settings.maxOpenConns)
 
 	// create database instance
-	if db, err := xorm.NewEngine("mysql", dsn); err != nil {
+	if db, err := xorm.NewEngine("postgres", connstring); err != nil {
 		panic(err)
 	} else {
 		database = db
@@ -135,7 +135,8 @@ func MustStartup(dsn string, opts ...ModelOption) func() {
 }
 
 func syncSchema() {
-	database.StoreEngine("InnoDB").Sync2(
+	// database.StoreEngine("InnoDB").Sync2(
+	database.Sync2(
 		new(model.Agent),
 		new(model.CardConsume),
 		new(model.Desk),

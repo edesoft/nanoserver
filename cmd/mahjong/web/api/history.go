@@ -5,13 +5,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/pkg/whitelist"
+	"nanoserver/db"
+	"nanoserver/pkg/whitelist"
 	"github.com/lonng/nex"
 
 	"github.com/gorilla/mux"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/pkg/errutil"
+	"nanoserver/protocol"
 	"golang.org/x/net/context"
 )
 

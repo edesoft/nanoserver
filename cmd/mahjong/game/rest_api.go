@@ -1,7 +1,7 @@
 package game
 
 import (
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/protocol"
 )
 
 // TODO: conc

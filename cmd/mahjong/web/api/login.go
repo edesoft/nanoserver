@@ -7,12 +7,12 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/db"
+	"nanoserver/pkg/errutil"
+	"nanoserver/protocol"
 
 	"github.com/gorilla/mux"
-	"github.com/lonng/nanoserver/db/model"
+	"nanoserver/db/model"
 	"github.com/lonng/nex"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"

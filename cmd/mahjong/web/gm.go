@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lonng/nanoserver/cmd/mahjong/game"
-	"github.com/lonng/nanoserver/cmd/mahjong/web/api"
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/cmd/mahjong/game"
+	"nanoserver/cmd/mahjong/web/api"
+	"nanoserver/db"
+	"nanoserver/pkg/errutil"
+	"nanoserver/protocol"
 	"github.com/lonng/nex"
 	log "github.com/sirupsen/logrus"
 )

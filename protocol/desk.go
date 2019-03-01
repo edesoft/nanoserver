@@ -1,7 +1,7 @@
 package protocol
 
 import (
-	"github.com/lonng/nanoserver/pkg/constant"
+	"nanoserver/pkg/constant"
 )
 
 type EnterDeskInfo struct {

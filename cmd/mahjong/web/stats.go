@@ -6,10 +6,10 @@ import (
 
 	"time"
 
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/db"
+	"nanoserver/protocol"
 
-	"github.com/lonng/nanoserver/pkg/errutil"
+	"nanoserver/pkg/errutil"
 )
 
 var dayInternal = 24 * 60 * 60

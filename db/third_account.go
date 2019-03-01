@@ -1,8 +1,8 @@
 package db
 
 import (
-	"github.com/lonng/nanoserver/db/model"
-	"github.com/lonng/nanoserver/pkg/errutil"
+	"nanoserver/db/model"
+	"nanoserver/pkg/errutil"
 )
 
 func QueryThirdAccount(account, platform string) (*model.ThirdAccount, error) {

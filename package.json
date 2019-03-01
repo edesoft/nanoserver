@@ -1,0 +1,12 @@
+{
+  "name": "nanoserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:edesoft/nanoserver.git",
+  "author": "Steven Zhang <jdomzhang@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "fresh",
+    "build": "go build ./cmd/mahjong"
+  }
+}

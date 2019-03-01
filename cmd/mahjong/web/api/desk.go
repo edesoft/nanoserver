@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/lonng/nanoserver/db"
-	"github.com/lonng/nanoserver/pkg/errutil"
-	"github.com/lonng/nanoserver/pkg/whitelist"
-	"github.com/lonng/nanoserver/protocol"
+	"nanoserver/db"
+	"nanoserver/pkg/errutil"
+	"nanoserver/pkg/whitelist"
+	"nanoserver/protocol"
 	"github.com/lonng/nex"
 )
 
