@@ -135,7 +135,6 @@ func MustStartup(connstring string, opts ...ModelOption) func() {
 }
 
 func syncSchema() {
-	// database.StoreEngine("InnoDB").Sync2(
 	database.Sync2(
 		new(model.Agent),
 		new(model.CardConsume),
